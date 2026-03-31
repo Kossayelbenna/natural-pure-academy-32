@@ -122,10 +122,6 @@ const Contact = () => {
                         <a href="mailto:contact@natural-and-pure.org" className="text-sm text-indigo-600 hover:text-indigo-800 transition-colors">
                           contact@natural-and-pure.org
                         </a>
-                        <br />
-                        <a href="mailto:contact@natural-and-pure.org" className="text-sm text-indigo-600 hover:text-indigo-800 transition-colors">
-                          contact@natural-and-pure.org
-                        </a>
                       </div>
                     </div>
                   </div>
