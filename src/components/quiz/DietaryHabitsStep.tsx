@@ -3,17 +3,17 @@ import { Label } from "@/components/ui/label";
 import { QuizStepProps } from "./types";
 
 const dietaryOptions = [
-  { value: "omnivore", label: "Omnivore (je mange de tout)" },
-  { value: "flexitarian", label: "Flexitarien (je limite ma consommation de viande)" },
-  { value: "pescatarian", label: "Pescetarien (je mange du poisson mais pas de viande)" },
-  { value: "vegetarian", label: "Végétarien (pas de viande ni poisson)" },
-  { value: "vegan", label: "Végan (aucun produit animal)" },
+  { value: "omnivore", label: "Omnivore (I eat everything)" },
+  { value: "flexitarian", label: "Flexitarian (I limit meat consumption)" },
+  { value: "pescatarian", label: "Pescatarian (I eat fish but not meat)" },
+  { value: "vegetarian", label: "Vegetarian (no meat or fish)" },
+  { value: "vegan", label: "Vegan (no animal products)" },
 ];
 
 const DietaryHabitsStep = ({ responses = { dietaryHabits: '' }, updateResponse }: QuizStepProps) => {
   return (
     <div>
-      <p className="font-medium mb-4">Quel régime alimentaire suivez-vous ?</p>
+      <p className="font-medium mb-4">What type of diet do you follow?</p>
       <RadioGroup
         value={responses.dietaryHabits}
         onValueChange={(value) => updateResponse("dietaryHabits", value)}

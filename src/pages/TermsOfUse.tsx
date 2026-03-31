@@ -34,17 +34,17 @@ const TermsOfUse = () => {
           <div className="prose prose-slate max-w-none">
             <h2>{t('1. Acceptance of Terms')}</h2>
             <p>
-              {t('By accessing or using the Natural Pure Academy website ("the Site"), you agree to comply with and be bound by these Terms of Use. If you do not agree to these terms, please do not use the Site.')}
+              {t('By accessing or using the NATURAL&PURE website ("the Site"), you agree to comply with and be bound by these Terms of Use. If you do not agree to these terms, please do not use the Site.')}
             </p>
 
             <h2>{t('2. Non-Profit Educational Purpose')}</h2>
             <p>
-              {t('Natural Pure Academy is a registered 501(c)(3) non-profit organization dedicated to research and education in the field of nutrition and micronutrients. Our resources are provided for educational purposes only and are not intended to replace professional medical advice.')}
+              {t('NATURALPURE CORPORATION (EIN: 98-1830546) is an Arizona nonprofit corporation dedicated to research and education in the field of nutrition. Our resources are provided for educational purposes only and are not intended to replace professional medical advice.')}
             </p>
 
             <h2>{t('3. Intellectual Property')}</h2>
             <p>
-              {t('All content on this site, including text, graphics, logos, images, and software, is the property of Natural Pure Academy and is protected by international copyright laws. Educational use and sharing of our content is encouraged with proper attribution.')}
+              {t('All content on this site, including text, graphics, logos, images, and software, is the property of NATURALPURE CORPORATION and is protected by international copyright laws. Educational use and sharing of our content is encouraged with proper attribution.')}
             </p>
 
             <h2>{t('4. Medical Disclaimer')}</h2>
@@ -73,28 +73,20 @@ const TermsOfUse = () => {
               {t('This site is exclusively for non-commercial, educational purposes. We do not sell any products or services directly through this website. Any references to supplements or nutritional products are strictly for educational purposes and not as product endorsements or promotions.')}
             </p>
 
-            <h2>{t('8. Use of Google Ad Grants')}</h2>
-            <p>
-              {t('Natural Pure Academy participates in the Google Ad Grants program to promote our educational mission. Our advertisements comply with Google Ad Grants policies, including prohibitions on:')}
-            </p>
-            <ul>
-              <li>{t('Commercial content or product promotions')}</li>
-              <li>{t('Sales of products or services')}</li>
-              <li>{t('Lead generation for commercial activities')}</li>
-            </ul>
 
-            <h2>{t('9. Modifications to Terms')}</h2>
+
+            <h2>{t('8. Modifications to Terms')}</h2>
             <p>
-              {t('Natural Pure Academy reserves the right to modify these Terms at any time. We will notify users of any material changes by posting the new Terms on the Site with an updated revision date.')}
+              {t('NATURAL&PURE reserves the right to modify these Terms at any time. We will notify users of any material changes by posting the new Terms on the Site with an updated revision date.')}
             </p>
 
-            <h2>{t('10. Contact Information')}</h2>
+            <h2>{t('9. Contact Information')}</h2>
             <p>
               {t('If you have any questions about these Terms, please contact us at:')}<br />
-              Natural Pure Academy<br />
-              123 Science Way<br />
-              San Francisco, CA 94107<br />
-              Email: legal@naturalpureacademy.org
+              NATURALPURE CORPORATION<br />
+              19580 West Indian School Rd<br />
+              Buckeye, AZ 85396, USA<br />
+              Email: legal@natural-and-pure.org
             </p>
 
             <div className="mt-10 p-5 bg-slate-50 rounded-lg border border-slate-200">
@@ -102,7 +94,7 @@ const TermsOfUse = () => {
                 {t('Non-Profit Status Declaration')}
               </h3>
               <p className="text-sm text-slate-600">
-                {t('Natural Pure Academy is a registered 501(c)(3) non-profit organization (EIN: 47-1234567) dedicated to research and education in the field of nutrition and health. All content and activities provided by Natural Pure Academy are for educational and informational purposes only, not for commercial gain.')}
+                {t('NATURALPURE CORPORATION (EIN: 98-1830546) is an Arizona nonprofit corporation dedicated to research and education in the field of nutrition and health. All content and activities provided by NATURAL&PURE are for educational and informational purposes only, not for commercial gain.')}
               </p>
             </div>
           </div>

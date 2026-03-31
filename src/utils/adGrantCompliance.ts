@@ -135,7 +135,6 @@ export const trackAdPerformance = (data: {
     // Check for potential compliance issues
     checkAdGrantCompliance(performanceData);
 
-    console.log('[GoogleAdGrants] Tracked ad performance:', data.action);
   } catch (error) {
     console.error('Error tracking ad performance:', error);
   }
@@ -337,7 +336,6 @@ export const generateComplianceReport = () => {
     reports.push(report);
     localStorage.setItem('ad_grant_compliance_reports', JSON.stringify(reports.slice(-20)));
 
-    console.log('[GoogleAdGrants] Generated compliance report:', report);
     return report;
   } catch (error) {
     console.error('Error generating compliance report:', error);
@@ -406,7 +404,6 @@ export const trackContentQuality = (path: string, metrics: {
     };
 
     localStorage.setItem('content_quality_metrics', JSON.stringify(contentMetrics));
-    console.log('[GoogleAdGrants] Tracked content quality for:', path);
   } catch (error) {
     console.error('Error tracking content quality:', error);
   }
@@ -634,7 +631,6 @@ export const runComprehensiveAdGrantAudit = async () => {
     audits.push(auditResults);
     localStorage.setItem('ad_grant_audits', JSON.stringify(audits.slice(-10)));
 
-    console.log('[GoogleAdGrants] Comprehensive audit completed:', auditResults);
     return auditResults;
   } catch (error) {
     console.error('Error performing comprehensive audit:', error);
@@ -647,7 +643,6 @@ export const runComprehensiveAdGrantAudit = async () => {
 
 // Automatically check for Ad Grant compliance issues based on site content
 export const autoCheckCompliance = (): ComplianceCheckResult => {
-  console.log('[GoogleAdGrantsSafety] Running automatic compliance check...');
 
   const issues: ComplianceIssue[] = [];
 
@@ -731,7 +726,6 @@ export const autoCheckCompliance = (): ComplianceCheckResult => {
   };
 
   localStorage.setItem('ad_grant_compliance_results', JSON.stringify(result));
-  console.log(`[GoogleAdGrantsSafety] Compliance check complete. Found ${issues.length} issues.`);
 
   return result;
 };

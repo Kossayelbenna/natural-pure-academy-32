@@ -260,7 +260,7 @@ const NosRecherches = () => {
                           <h4 className="text-lg font-medium text-indigo-700 mb-1">2015</h4>
                           <h5 className="text-slate-800 font-medium mb-2">Fondation du laboratoire</h5>
                           <p className="text-slate-600 text-sm">
-                            Création de Natural Pure par Dr. Marie Dubois après 10 ans de recherche universitaire en nutrition.
+                            Création de Natural Pure par Kossay El Benna après 10 ans de recherche universitaire en nutrition.
                           </p>
                         </div>
                       </div>

@@ -89,7 +89,6 @@ export const initializeAIModel = (): void => {
       modelWithSupplements.supplementScores = supplementScores;
       secureStorageService.setItem('aiModel', modelWithSupplements);
 
-      console.log("Modèle AI initialisé avec les données du catalogue de suppléments");
     }
   } catch (error) {
     console.error("Erreur lors de l'initialisation du modèle AI:", error);
@@ -253,14 +252,12 @@ const updateAIModelWithFeedback = (
 export const trainAIModel = async (): Promise<void> => {
   return new Promise((resolve) => {
     try {
-      console.log("Début de l'entraînement du modèle AI...");
 
       // Récupérer toutes les données
       const learningData: LearningData[] = secureStorageService.getItem('aiLearningData') || [];
       const userFeedback: UserFeedback[] = secureStorageService.getItem('userFeedback') || [];
 
       if (learningData.length === 0) {
-        console.log("Pas de données d'apprentissage disponibles");
         resolve();
         return;
       }
@@ -376,17 +373,9 @@ export const trainAIModel = async (): Promise<void> => {
 
       // Sauvegarder le modèle entraîné
       secureStorageService.setItem('aiModel', aiModel);
-
-      console.log("Entraînement du modèle AI terminé:", {
-        supplements: Object.keys(aiModel.supplementScores).length,
-        profiles: aiModel.userProfiles.length,
-        iterations: aiModel.trainingIterations,
-        version: aiModel.version
-      });
-
+      // Training complete — model saved above
       // Simuler un processus d'entraînement qui prend du temps
       setTimeout(() => {
-        console.log('Entraînement du modèle terminé');
         resolve();
       }, 6000); // Simule 6 secondes d'entraînement
 
@@ -716,7 +705,6 @@ export const resetAIModel = (): void => {
   try {
     // Réinitialiser le modèle avec les valeurs initiales
     secureStorageService.setItem('aiModel', initialAIModel);
-    console.log("Modèle AI réinitialisé aux valeurs par défaut");
   } catch (error) {
     console.error("Erreur lors de la réinitialisation du modèle AI:", error);
   }

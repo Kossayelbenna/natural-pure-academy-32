@@ -41,7 +41,7 @@ const Support = () => {
                   {t('Our Non-Profit Mission')}
                 </h2>
                 <p className="text-slate-700 mb-4">
-                  {t('Natural Pure Academy is dedicated to advancing scientific understanding of nutrition and making that knowledge accessible to everyone. Every contribution helps us:')}
+                  {t('NATURALPURE CORPORATION is dedicated to advancing scientific understanding of nutrition and making that knowledge accessible to everyone. Every contribution helps us:')}
                 </p>
                 <ul className="space-y-2 mb-6">
                   <li className="flex items-start">
@@ -70,7 +70,7 @@ const Support = () => {
                   </li>
                 </ul>
                 <p className="text-slate-700 font-medium">
-                  {t('EIN: 47-1234567 • 501(c)(3) registered non-profit organization')}
+                  {t('EIN: 98-1830546 · NATURALPURE CORPORATION · Arizona Nonprofit')}
                 </p>
               </div>
               <div className="md:w-1/2">

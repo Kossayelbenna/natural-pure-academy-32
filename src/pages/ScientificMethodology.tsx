@@ -9,7 +9,7 @@ const ScientificMethodologyPage: React.FC = () => {
   return (
     <>
       <SEOHead 
-        title="Méthodologie Scientifique | Natural Pure Academy"
+        title="Méthodologie Scientifique | NATURALPURE CORPORATION"
         description="Découvrez notre approche scientifique rigoureuse qui guide nos recherches et nos recommandations en nutrition et santé."
         canonicalUrl="/methodologie-scientifique"
       />

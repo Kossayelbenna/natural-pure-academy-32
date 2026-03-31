@@ -121,8 +121,8 @@ const Volunteer = () => {
   return (
     <>
       <SEOHead
-        title={t('Volunteer Opportunities - Natural Pure Academy')}
-        description={t('Explore volunteer opportunities with Natural Pure Academy and help advance nutrition education and research as a non-profit organization.')}
+        title={t('Volunteer Opportunities - NATURALPURE CORPORATION')}
+        description={t('Explore volunteer opportunities with NATURALPURE CORPORATION and help advance nutrition education and research as a non-profit organization.')}
         keywords={t('volunteer, non-profit, nutrition education, research volunteer, community outreach')}
       />
       

@@ -119,7 +119,6 @@ const NutritionalQuiz = ({ onComplete, onUserInfoUpdate }: NutritionalQuizProps)
     if (currentStepIndex > 0) {
       // Calculer le délai stratégique basé sur le type d'utilisateur
       const strategicDelay = getStrategicDelay(userType);
-      console.log(`[NeuroEngine] Délai stratégique calculé: ${strategicDelay.toFixed(2)}s pour le type ${userType}`);
 
       const timer = setTimeout(() => {
         setInsightIndex(prev => (prev + 1) % insightMessages.length);

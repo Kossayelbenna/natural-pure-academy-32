@@ -12,7 +12,7 @@ const SiteMap: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
       <SEOHead 
-        title={t('Site Map - Natural Pure Academy')}
+        title={t('Site Map - NATURALPURE CORPORATION')}
         description={t('Navigate our scientific resources, research, and educational content with our comprehensive site map.')}
         keywords={['site map', 'navigation', 'scientific resources', 'research', 'educational content', 'non-profit']}
       />

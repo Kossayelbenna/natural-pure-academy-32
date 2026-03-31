@@ -384,7 +384,6 @@ export const trainAIModel = async (fullTraining: boolean = true): Promise<void> 
     // Sauvegarder le modèle mis à jour
     secureStorageService.setItem('aiModelState', updatedModel);
 
-    console.log(`Modèle IA entraîné avec succès (v${newVersion}). Précision: ${(updatedModel.accuracy * 100).toFixed(2)}%`);
 
   } catch (error) {
     console.error("Erreur lors de l'entraînement du modèle IA:", error);

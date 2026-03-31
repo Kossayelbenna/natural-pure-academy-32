@@ -4,31 +4,31 @@ import { Separator } from "@/components/ui/separator";
 import { QuizStepProps } from "./types";
 
 const exerciseOptions = [
-  { value: "daily", label: "Quotidiennement" },
-  { value: "weekly", label: "2-3 fois par semaine" },
-  { value: "monthly", label: "Quelques fois par mois" },
-  { value: "rarely", label: "Rarement ou jamais" },
+  { value: "daily", label: "Daily" },
+  { value: "weekly", label: "2–3 times per week" },
+  { value: "monthly", label: "A few times per month" },
+  { value: "rarely", label: "Rarely or never" },
 ];
 
 const sleepOptions = [
-  { value: "excellent", label: "Excellent - Je me réveille frais et dispos" },
-  { value: "good", label: "Bon - Quelques difficultés occasionnelles" },
-  { value: "average", label: "Moyen - Difficultés fréquentes (endormissement, réveils)" },
-  { value: "poor", label: "Mauvais - Problèmes chroniques de sommeil" },
+  { value: "excellent", label: "Excellent — I wake up feeling fully rested" },
+  { value: "good", label: "Good — occasional difficulties" },
+  { value: "average", label: "Average — frequent difficulties (falling asleep, waking up)" },
+  { value: "poor", label: "Poor — chronic sleep problems" },
 ];
 
 const stressOptions = [
-  { value: "low", label: "Faible - Je me sens généralement détendu" },
-  { value: "moderate", label: "Modéré - Stress occasionnel" },
-  { value: "high", label: "Élevé - Stress fréquent" },
-  { value: "severe", label: "Sévère - Stress chronique" },
+  { value: "low", label: "Low — I generally feel relaxed" },
+  { value: "moderate", label: "Moderate — occasional stress" },
+  { value: "high", label: "High — frequent stress" },
+  { value: "severe", label: "Severe — chronic stress" },
 ];
 
 const LifestyleStep = ({ responses, updateResponse }: QuizStepProps) => {
   return (
     <div className="space-y-6">
       <div>
-        <p className="font-medium mb-3">À quelle fréquence pratiquez-vous une activité physique ?</p>
+        <p className="font-medium mb-3">How often do you engage in physical activity?</p>
         <RadioGroup
           value={responses.exerciseFrequency}
           onValueChange={(value) => updateResponse("exerciseFrequency", value)}
@@ -46,7 +46,7 @@ const LifestyleStep = ({ responses, updateResponse }: QuizStepProps) => {
       <Separator />
 
       <div>
-        <p className="font-medium mb-3">Comment évaluez-vous la qualité de votre sommeil ?</p>
+        <p className="font-medium mb-3">How would you rate the quality of your sleep?</p>
         <RadioGroup
           value={responses.sleepQuality}
           onValueChange={(value) => updateResponse("sleepQuality", value)}
@@ -64,7 +64,7 @@ const LifestyleStep = ({ responses, updateResponse }: QuizStepProps) => {
       <Separator />
 
       <div>
-        <p className="font-medium mb-3">Comment évaluez-vous votre niveau de stress ?</p>
+        <p className="font-medium mb-3">How would you rate your stress level?</p>
         <RadioGroup
           value={responses.stressLevel}
           onValueChange={(value) => updateResponse("stressLevel", value)}

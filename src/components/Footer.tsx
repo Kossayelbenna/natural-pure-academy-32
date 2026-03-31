@@ -22,12 +22,12 @@ const Footer = () => {
             </p>
             <div className="flex items-center gap-3">
               <a
-                href="mailto:founder@natural-and-pure.org"
+                href="mailto:contact@natural-and-pure.org"
                 className="flex items-center gap-2 text-sm text-slate-400 hover:text-emerald-400 transition-colors"
                 aria-label="Email founder"
               >
                 <Mail className="h-4 w-4" />
-                founder@natural-and-pure.org
+                contact@natural-and-pure.org
               </a>
             </div>
             <div className="inline-flex items-center gap-2 px-3 py-2 bg-emerald-900/40 border border-emerald-700/50 rounded-lg">

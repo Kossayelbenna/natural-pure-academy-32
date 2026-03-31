@@ -230,11 +230,11 @@ const About = () => {
                     Kossay is the founder and president of NATURAL&PURE, bringing expertise in both nutrition science and artificial intelligence. His vision is to democratize access to evidence-based nutrition education globally. Kossay is committed to maintaining NATURAL&PURE as a nonprofit organization solely serving the public good — refusing commercialization or advertising partnerships to preserve scientific integrity.
                   </p>
                   <a
-                    href="mailto:founder@natural-and-pure.org"
+                    href="mailto:contact@natural-and-pure.org"
                     className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-600 hover:bg-emerald-500 rounded-lg text-white text-sm font-medium transition-colors"
                   >
                     <Mail className="h-4 w-4" />
-                    founder@natural-and-pure.org
+                    contact@natural-and-pure.org
                   </a>
                 </div>
               </motion.div>
@@ -276,7 +276,6 @@ const About = () => {
                       { label: "Entity Type", value: "Arizona Nonprofit Corporation", mono: false },
                       { label: "Entity ID", value: "23750798", mono: true },
                       { label: "Founded", value: "November 2024", mono: false },
-                      { label: "Mission Status", value: "501(c)(3) Application Filed", mono: false },
                     ].map((item, i) => (
                       <div key={i} className="flex flex-col gap-1">
                         <span className="text-xs font-semibold uppercase tracking-wider text-slate-500">{item.label}</span>

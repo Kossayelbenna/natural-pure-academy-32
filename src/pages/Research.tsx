@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SEOHead from '@/components/SEOHead';
+import MedicalDisclaimer from '@/components/MedicalDisclaimer';
 import {
   BookOpen,
   Brain,
@@ -64,9 +65,20 @@ const Research = () => {
         description="NutriAI: NATURAL&PURE's flagship project using Claude AI to map evidence gaps in nutritional science. Learn how we use Anthropic's Claude API to democratize nutrition research."
         canonicalUrl="https://natural-and-pure.org/research"
         keywords={["NutriAI", "Claude API", "nutrition research", "AI science", "evidence gaps", "Anthropic", "nonprofit AI"]}
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            { "@type": "Question", "name": "How does the AI improve over time?", "acceptedAnswer": { "@type": "Answer", "text": "Claude's improved reasoning means better analysis with each model update. We also incorporate user feedback and new research papers continuously." } },
+            { "@type": "Question", "name": "What about AI hallucinations?", "acceptedAnswer": { "@type": "Answer", "text": "Constitutional AI and mandatory citations significantly reduce hallucinations. Every recommendation includes links to source research." } },
+            { "@type": "Question", "name": "Why specifically Claude (Anthropic)?", "acceptedAnswer": { "@type": "Answer", "text": "Claude's advanced reasoning, long context window, and Constitutional AI make it ideal for analyzing complex scientific literature safely." } },
+            { "@type": "Question", "name": "Is this truly nonprofit?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. NATURALPURE CORPORATION (EIN: 98-1830546) is an Arizona nonprofit corporation. We have no commercial agenda and all content is public domain (CC-0)." } }
+          ]
+        }}
       />
 
       <Navbar />
+      <MedicalDisclaimer variant="banner" />
 
       <main>
         {/* ═══════════════════════════════════════════

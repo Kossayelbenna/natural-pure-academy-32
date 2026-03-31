@@ -9,9 +9,9 @@ const AdGrantCompliance: React.FC = () => {
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <Helmet>
-        <title>Google Ad Grant Compliance | Natural Pure Academy</title>
-        <meta name="description" content="Monitoring and ensuring compliance with Google Ad Grant requirements for Natural Pure Academy, a non-profit nutrition research organization." />
-        <meta name="keywords" content="Google Ad Grant, non-profit, compliance, Natural Pure Academy" />
+        <title>Google Ad Grant Compliance | NATURALPURE CORPORATION</title>
+        <meta name="description" content="Monitoring and ensuring compliance with Google Ad Grant requirements for NATURALPURE CORPORATION, a non-profit nutrition research organization." />
+        <meta name="keywords" content="Google Ad Grant, non-profit, compliance, NATURALPURE CORPORATION" />
         <meta name="organization-type" content="nonprofit" />
       </Helmet>
       

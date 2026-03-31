@@ -238,7 +238,6 @@ const MetricTracker = () => {
   
   // Generic event tracking function
   const trackEvent = (data: Record<string, any>) => {
-    console.log('[GoogleAdGrantsMetric]', data);
     
     // Store events for reporting
     try {

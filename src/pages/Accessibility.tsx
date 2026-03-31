@@ -34,7 +34,7 @@ const Accessibility = () => {
           <div className="prose prose-slate max-w-none">
             <h2>{t('Our Commitment to Accessibility')}</h2>
             <p>
-              {t('Natural Pure Academy is committed to ensuring digital accessibility for people with disabilities. We are continually improving the user experience for everyone and applying the relevant accessibility standards.')}
+              {t('NATURALPURE CORPORATION is committed to ensuring digital accessibility for people with disabilities. We are continually improving the user experience for everyone and applying the relevant accessibility standards.')}
             </p>
 
             <h2>{t('Compliance Status')}</h2>
@@ -94,10 +94,10 @@ const Accessibility = () => {
 
             <h2>{t('Feedback and Contact Information')}</h2>
             <p>
-              {t('We welcome your feedback on the accessibility of the Natural Pure Academy website. Please let us know if you encounter accessibility barriers on our site:')}
+              {t('We welcome your feedback on the accessibility of the NATURALPURE CORPORATION website. Please let us know if you encounter accessibility barriers on our site:')}
             </p>
             <ul>
-              <li>{t('Email: accessibility@naturalpureacademy.org')}</li>
+              <li>{t('Email: accessibility@natural-and-pure.org')}</li>
               <li>{t('Phone: +1 (555) 123-4567')}</li>
               <li>{t('Address: 123 Science Way, San Francisco, CA 94107')}</li>
             </ul>
@@ -107,7 +107,7 @@ const Accessibility = () => {
 
             <h2>{t('Compatibility with Assistive Technologies')}</h2>
             <p>
-              {t('The Natural Pure Academy website is designed to be compatible with the following assistive technologies:')}
+              {t('The NATURALPURE CORPORATION website is designed to be compatible with the following assistive technologies:')}
             </p>
             <ul>
               <li>{t('Screen readers (NVDA, JAWS, VoiceOver)')}</li>
@@ -118,7 +118,7 @@ const Accessibility = () => {
 
             <h2>{t('Technical Specifications')}</h2>
             <p>
-              {t('Accessibility of the Natural Pure Academy website relies on the following technologies to work with the particular combination of web browser and any assistive technologies or plugins installed on your computer:')}
+              {t('Accessibility of the NATURALPURE CORPORATION website relies on the following technologies to work with the particular combination of web browser and any assistive technologies or plugins installed on your computer:')}
             </p>
             <ul>
               <li>HTML</li>
@@ -132,7 +132,7 @@ const Accessibility = () => {
 
             <h2>{t('Assessment Approach')}</h2>
             <p>
-              {t('Natural Pure Academy assessed the accessibility of this website by the following approaches:')}
+              {t('NATURALPURE CORPORATION assessed the accessibility of this website by the following approaches:')}
             </p>
             <ul>
               <li>{t('Self-evaluation')}</li>

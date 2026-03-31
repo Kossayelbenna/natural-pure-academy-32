@@ -159,7 +159,6 @@ const ConversionTracker = () => {
 
   // Generic event tracking function
   const trackEvent = (data: Record<string, any>) => {
-    console.log('[GoogleAdGrantsTrack]', data);
     
     // Store events for reporting
     try {
@@ -176,7 +175,6 @@ const ConversionTracker = () => {
 
   // Conversion tracking function
   const trackConversion = (conversionType: string, data: Record<string, any>) => {
-    console.log('[GoogleAdGrantsConversion]', conversionType, data);
     
     // Store conversion for reporting
     try {

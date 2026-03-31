@@ -254,7 +254,7 @@ const ResearchPublications = () => {
               {t('Research Collaborations')}
             </h2>
             <p className="text-slate-700 mb-4">
-              {t('Natural Pure Academy actively collaborates with universities and research institutions. If you\'re interested in research partnerships, please contact our team.')}
+              {t('NATURALPURE CORPORATION actively collaborates with universities and research institutions. If you\'re interested in research partnerships, please contact our team.')}
             </p>
             <Link
               to="/contact"

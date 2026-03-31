@@ -4,24 +4,24 @@ import { Separator } from "@/components/ui/separator";
 import { QuizStepProps } from "./types";
 
 const frequencyOptions = [
-  { value: "daily", label: "Quotidiennement" },
-  { value: "weekly", label: "Plusieurs fois par semaine" },
-  { value: "monthly", label: "Quelques fois par mois" },
-  { value: "rarely", label: "Rarement ou jamais" },
+  { value: "daily", label: "Daily" },
+  { value: "weekly", label: "Several times per week" },
+  { value: "monthly", label: "A few times per month" },
+  { value: "rarely", label: "Rarely or never" },
 ];
 
 const fruitVegOptions = [
-  { value: "0-1", label: "0 à 1 portion" },
-  { value: "2-3", label: "2 à 3 portions" },
-  { value: "4-5", label: "4 à 5 portions" },
-  { value: "6+", label: "6 portions ou plus" },
+  { value: "0-1", label: "0 to 1 serving" },
+  { value: "2-3", label: "2 to 3 servings" },
+  { value: "4-5", label: "4 to 5 servings" },
+  { value: "6+", label: "6 or more servings" },
 ];
 
 const ProteinConsumptionStep = ({ responses, updateResponse }: QuizStepProps) => {
   return (
     <div className="space-y-6">
       <div>
-        <p className="font-medium mb-3">À quelle fréquence consommez-vous de la viande ?</p>
+        <p className="font-medium mb-3">How often do you consume meat?</p>
         <RadioGroup
           value={responses.meatConsumption}
           onValueChange={(value) => updateResponse("meatConsumption", value)}
@@ -39,7 +39,7 @@ const ProteinConsumptionStep = ({ responses, updateResponse }: QuizStepProps) =>
       <Separator />
 
       <div>
-        <p className="font-medium mb-3">À quelle fréquence consommez-vous du poisson ou des fruits de mer ?</p>
+        <p className="font-medium mb-3">How often do you consume fish or seafood?</p>
         <RadioGroup
           value={responses.fishConsumption}
           onValueChange={(value) => updateResponse("fishConsumption", value)}
@@ -57,7 +57,7 @@ const ProteinConsumptionStep = ({ responses, updateResponse }: QuizStepProps) =>
       <Separator />
 
       <div>
-        <p className="font-medium mb-3">Combien de portions de fruits et légumes consommez-vous par jour ?</p>
+        <p className="font-medium mb-3">How many servings of fruits and vegetables do you eat per day?</p>
         <RadioGroup
           value={responses.fruitVegConsumption}
           onValueChange={(value) => updateResponse("fruitVegConsumption", value)}

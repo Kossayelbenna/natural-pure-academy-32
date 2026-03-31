@@ -5,7 +5,7 @@
  */
 
 export const pingSitemapToSearchEngines = async () => {
-  const sitemapUrl = 'https://naturalpureacademy.org/sitemap.xml';
+  const sitemapUrl = 'https://natural-and-pure.org/sitemap.xml';
   const searchEngines = [
     `https://www.google.com/ping?sitemap=${encodeURIComponent(sitemapUrl)}`,
     `https://www.bing.com/ping?sitemap=${encodeURIComponent(sitemapUrl)}`,
@@ -28,7 +28,6 @@ export const pingSitemapToSearchEngines = async () => {
       result => result.status === 'fulfilled' && (result.value as any).success
     ).length;
 
-    console.log(`Sitemap pinged to ${successfulPings} of ${searchEngines.length} search engines`);
     
     return {
       success: successfulPings > 0,

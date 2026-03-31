@@ -4,99 +4,78 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-  <!-- Main Pages -->
+  <!-- Core Pages -->
   <url>
-    <loc>https://naturalpureacademy.org/</loc>
+    <loc>https://natural-and-pure.org/</loc>
+    <lastmod>2026-03-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://naturalpureacademy.org/about</loc>
+    <loc>https://natural-and-pure.org/about</loc>
+    <lastmod>2026-03-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://naturalpureacademy.org/impact</loc>
+    <loc>https://natural-and-pure.org/research</loc>
+    <lastmod>2026-03-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://natural-and-pure.org/quiz</loc>
+    <lastmod>2026-03-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://naturalpureacademy.org/contact</loc>
+    <loc>https://natural-and-pure.org/contact</loc>
+    <lastmod>2026-03-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  
   <!-- Research & Education -->
   <url>
-    <loc>https://naturalpureacademy.org/nos-recherches</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://naturalpureacademy.org/bibliotheque-scientifique</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://naturalpureacademy.org/scientific-methodology</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://naturalpureacademy.org/labo-solutions</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <!-- Health Resources -->
-  <url>
-    <loc>https://naturalpureacademy.org/articles</loc>
+    <loc>https://natural-and-pure.org/articles</loc>
+    <lastmod>2026-03-31</lastmod>
     <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://naturalpureacademy.org/nutrition</loc>
-    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://naturalpureacademy.org/profile-sante</loc>
+    <loc>https://natural-and-pure.org/nutrition</loc>
+    <lastmod>2026-03-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://naturalpureacademy.org/quiz</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
   
   <!-- Legal Pages -->
   <url>
-    <loc>https://naturalpureacademy.org/privacy-policy</loc>
+    <loc>https://natural-and-pure.org/privacy-policy</loc>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://naturalpureacademy.org/terms-of-use</loc>
+    <loc>https://natural-and-pure.org/terms-of-use</loc>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://naturalpureacademy.org/accessibility</loc>
+    <loc>https://natural-and-pure.org/accessibility</loc>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <!-- Support -->
   <url>
-    <loc>https://naturalpureacademy.org/support</loc>
+    <loc>https://natural-and-pure.org/support</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <!-- Sitemap -->
   <url>
-    <loc>https://naturalpureacademy.org/site-map</loc>
+    <loc>https://natural-and-pure.org/site-map</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>

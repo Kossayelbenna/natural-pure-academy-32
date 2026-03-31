@@ -7,6 +7,7 @@ import MetricTracker from "./components/MetricTracker";
 import ConversionTracker from "./components/ConversionTracker";
 import ArticleEngagementTracker from "./components/ArticleEngagementTracker";
 import { LanguageProvider } from "./components/LanguageProvider";
+import ErrorBoundary from "./components/ErrorBoundary";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -46,7 +47,9 @@ const App = () => {
         <TooltipProvider>
           <div className="min-h-screen bg-background" lang={language}>
             <Toaster />
-            <Outlet />
+            <ErrorBoundary>
+              <Outlet />
+            </ErrorBoundary>
             <MetricTracker />
             <ConversionTracker />
             <ArticleEngagementTracker />

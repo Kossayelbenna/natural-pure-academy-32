@@ -29,7 +29,7 @@ interface TeamMember {
 const teamMembers: TeamMember[] = [
   {
     id: "marie-dubois",
-    name: "Dr. Marie Dubois, PhD",
+    name: "Kossay El Benna, PhD",
     title: "Director of Research",
     credentials: "PhD in Nutritional Biochemistry, Harvard University",
     bio: "Dr. Dubois leads our micronutrient research program with over 15 years of experience in nutritional biochemistry. Her groundbreaking work on magnesium metabolism has been published in leading scientific journals.",

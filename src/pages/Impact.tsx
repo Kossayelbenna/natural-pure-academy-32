@@ -32,7 +32,7 @@ const Impact = () => {
               Making a Difference Through Science
             </h1>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto mb-8">
-              At Natural Pure Academy, our mission is to improve global health through scientific research and education. 
+              At NATURALPURE CORPORATION, our mission is to improve global health through scientific research and education. 
               Here's how our work is creating tangible impact for communities and individuals worldwide.
             </p>
           </div>
@@ -108,13 +108,13 @@ const Impact = () => {
                   name: "Dr. James Wilson",
                   role: "Medical Doctor, Chicago",
                   image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=300",
-                  quote: "The continuing education programs from Natural Pure Academy have completely transformed how I approach nutritional recommendations with my patients. The science-based approach and emphasis on micronutrient balance has filled a major gap in traditional medical education."
+                  quote: "The continuing education programs from NATURALPURE CORPORATION have completely transformed how I approach nutritional recommendations with my patients. The science-based approach and emphasis on micronutrient balance has filled a major gap in traditional medical education."
                 },
                 {
                   name: "Sarah Johnson",
                   role: "Nutrition Educator",
                   image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=300",
-                  quote: "I've incorporated Natural Pure Academy's research into our community health programs, reaching over 500 low-income families. The clear, accessible way they present complex nutritional science has helped us improve health outcomes in our community."
+                  quote: "I've incorporated NATURALPURE CORPORATION's research into our community health programs, reaching over 500 low-income families. The clear, accessible way they present complex nutritional science has helped us improve health outcomes in our community."
                 }
               ].map((story, i) => (
                 <div key={i} className="bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden flex flex-col">

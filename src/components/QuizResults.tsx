@@ -24,10 +24,10 @@ const QuizResults: React.FC<QuizResultsProps> = ({
 
   return (
     <div className="space-y-8 px-4 py-6 max-w-4xl mx-auto">
-      <div className="space-y-2">
-        <h1 className="text-3xl font-bold tracking-tight">Vos Résultats d'Analyse Nutritionnelle</h1>
+      <div className="space-y-2 text-center md:text-left">
+        <h1 className="text-3xl font-bold tracking-tight">Your Nutritional Analysis Results</h1>
         <p className="text-muted-foreground">
-          Basé sur vos réponses, nous avons analysé votre profil nutritionnel et identifié les solutions les plus adaptées.
+          Based on your answers, we have analyzed your nutritional profile and identified the most suitable solutions.
         </p>
       </div>
 
@@ -36,16 +36,16 @@ const QuizResults: React.FC<QuizResultsProps> = ({
           <CardHeader className="pb-2">
             <CardTitle className="text-xl flex items-center">
               <Leaf className="h-5 w-5 mr-2 text-green-500" />
-              Votre Profil Nutritionnel
+              Your Nutritional Profile
             </CardTitle>
             <CardDescription>
-              Basé sur vos réponses au questionnaire
+              Based on your assessment responses
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
             {quizData.objectives && (
               <div className="space-y-1">
-                <p className="text-sm font-medium">Objectifs principaux:</p>
+                <p className="text-sm font-medium">Primary Goals:</p>
                 <ul className="text-sm pl-5 list-disc">
                   {quizData.objectives.map((objective, idx) => (
                     <li key={idx}>{objective}</li>
@@ -56,7 +56,7 @@ const QuizResults: React.FC<QuizResultsProps> = ({
 
             {quizData.symptoms && (
               <div className="space-y-1">
-                <p className="text-sm font-medium">Symptômes signalés:</p>
+                <p className="text-sm font-medium">Reported Symptoms:</p>
                 <ul className="text-sm pl-5 list-disc">
                   {quizData.symptoms.map((symptom, idx) => (
                     <li key={idx}>{symptom}</li>
@@ -65,10 +65,10 @@ const QuizResults: React.FC<QuizResultsProps> = ({
               </div>
             )}
 
-            {quizData.dietHabits && (
+            {quizData.dietaryHabits && (
               <div className="space-y-1">
-                <p className="text-sm font-medium">Habitudes alimentaires:</p>
-                <p className="text-sm">{quizData.dietHabits.join(', ')}</p>
+                <p className="text-sm font-medium">Dietary Habits:</p>
+                <p className="text-sm">{quizData.dietaryHabits}</p>
               </div>
             )}
           </CardContent>
@@ -78,23 +78,23 @@ const QuizResults: React.FC<QuizResultsProps> = ({
           <CardHeader className="pb-2">
             <CardTitle className="text-xl flex items-center">
               <AlertCircle className="h-5 w-5 mr-2 text-amber-500" />
-              Facteurs à Considérer
+              Factors to Consider
             </CardTitle>
             <CardDescription>
-              Points importants pour votre santé nutritionnelle
+              Important points for your nutritional health
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
             <div className="space-y-2">
-              <p className="text-sm font-medium">Analyse scientifique:</p>
+              <p className="text-sm font-medium">Scientific Analysis:</p>
               <p className="text-sm text-muted-foreground">
-                Nos experts en nutrition ont identifié plusieurs facteurs clés qui peuvent affecter votre santé, basés sur les informations que vous avez fournies.
+                Our nutrition experts have identified several key factors that may affect your health, based on the information you provided.
               </p>
             </div>
 
             <div className="space-y-2">
               <div className="flex justify-between text-sm">
-                <span>Équilibre nutritionnel:</span>
+                <span>Nutritional Balance:</span>
                 <span className="font-medium">65%</span>
               </div>
               <Progress value={65} className="h-2" />
@@ -102,7 +102,7 @@ const QuizResults: React.FC<QuizResultsProps> = ({
 
             <div className="space-y-2">
               <div className="flex justify-between text-sm">
-                <span>Absorption des nutriments:</span>
+                <span>Nutrient Absorption:</span>
                 <span className="font-medium">58%</span>
               </div>
               <Progress value={58} className="h-2" />
@@ -110,7 +110,7 @@ const QuizResults: React.FC<QuizResultsProps> = ({
 
             <div className="space-y-2">
               <div className="flex justify-between text-sm">
-                <span>Réponse inflammatoire:</span>
+                <span>Inflammatory Response:</span>
                 <span className="font-medium">72%</span>
               </div>
               <Progress value={72} className="h-2" />
@@ -119,102 +119,116 @@ const QuizResults: React.FC<QuizResultsProps> = ({
         </Card>
       </div>
 
-      <h2 className="text-2xl font-bold mt-10">Solutions Recommandées</h2>
+      <h2 className="text-2xl font-bold mt-10">Recommended Solutions</h2>
       <p className="text-muted-foreground mb-6">
-        Basées sur notre analyse scientifique, voici les solutions les plus adaptées à votre profil
+        Based on our scientific analysis, here are the solutions best suited for your profile
       </p>
 
-      <div className="space-y-6">
-        {recommendations.map((recommendation, index) => {
-          const supplement = SUPPLEMENT_CATALOG.find(s => s.id === recommendation.supplementId);
-          if (!supplement) return null;
+      {recommendations.length === 0 ? (
+        <Card className="border-indigo-100 bg-indigo-50/50">
+          <CardContent className="pt-6">
+            <div className="text-center py-6">
+              <AlertCircle className="h-10 w-10 text-indigo-400 mx-auto mb-4 opacity-50" />
+              <h3 className="text-lg font-medium text-slate-800 mb-2">Analyzing your complete profile</h3>
+              <p className="text-slate-600 max-w-md mx-auto">
+                No specific supplements matched your exact pattern today, but we recommend discussing these results with a healthcare provider to determine the best path forward.
+              </p>
+            </div>
+          </CardContent>
+        </Card>
+      ) : (
+        <div className="space-y-6">
+          {recommendations.map((recommendation, index) => {
+            const supplement = SUPPLEMENT_CATALOG[recommendation.supplementId];
+            if (!supplement) return null;
 
-          const matchScore = getMatchScore(recommendation);
-          const explanation = generateDetailedRecommendationExplanation(quizData, recommendation);
+            const matchScore = getMatchScore(recommendation);
+            const explanation = supplement.description || "Based on your clinical profile, this formulation supports your primary objectives.";
 
-          return (
-            <Card key={index} className={index === 0 ? "border-green-500 shadow-md" : ""}>
-              <CardHeader>
-                <div className="flex justify-between items-start">
-                  <div>
-                    <CardTitle className="text-xl">{supplement.name}</CardTitle>
-                    <CardDescription className="mt-1">
-                      {supplement.shortDescription}
-                    </CardDescription>
+            return (
+              <Card key={index} className={index === 0 ? "border-green-500 shadow-md" : ""}>
+                <CardHeader>
+                  <div className="flex justify-between items-start">
+                    <div>
+                      <CardTitle className="text-xl">{supplement.name}</CardTitle>
+                      <CardDescription className="mt-1">
+                        {supplement.description}
+                      </CardDescription>
+                    </div>
+                    <div className="bg-slate-100 px-3 py-2 rounded-lg flex items-center">
+                      <p className="font-bold text-lg">{matchScore}%</p>
+                      <p className="text-xs ml-1">match</p>
+                    </div>
                   </div>
-                  <div className="bg-slate-100 px-3 py-2 rounded-lg flex items-center">
-                    <p className="font-bold text-lg">{matchScore}%</p>
-                    <p className="text-xs ml-1">match</p>
-                  </div>
-                </div>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="space-y-2">
-                  <h4 className="font-medium text-sm flex items-center">
-                    <Info className="h-4 w-4 mr-1 text-blue-500" />
-                    Pourquoi c'est adapté à votre profil
-                  </h4>
-                  <p className="text-sm text-muted-foreground">{explanation}</p>
-                </div>
-
-                <Separator />
-
-                <div className="space-y-2">
-                  <h4 className="font-medium text-sm">Bénéfices principaux:</h4>
-                  <ul className="grid grid-cols-1 gap-1 sm:grid-cols-2">
-                    {supplement.benefits.map((benefit, idx) => (
-                      <li key={idx} className="text-sm flex items-start">
-                        <span className="bg-green-100 text-green-800 rounded-full p-1 mr-2 mt-0.5">
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-3 h-3">
-                            <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" />
-                          </svg>
-                        </span>
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                {supplement.ingredients && (
+                </CardHeader>
+                <CardContent className="space-y-4">
                   <div className="space-y-2">
-                    <h4 className="font-medium text-sm">Actifs principaux:</h4>
-                    <p className="text-sm text-muted-foreground">{supplement.ingredients.join(', ')}</p>
+                    <h4 className="font-medium text-sm flex items-center">
+                      <Info className="h-4 w-4 mr-1 text-blue-500" />
+                      Why it's suited for your profile
+                    </h4>
+                    <p className="text-sm text-muted-foreground">{explanation}</p>
                   </div>
-                )}
 
-                <div className="flex items-center text-sm text-muted-foreground mt-2">
-                  <Clock className="h-4 w-4 mr-1" />
-                  Résultats généralement visibles après {supplement.timeToResults || '2-4 semaines'} d'utilisation régulière
-                </div>
-              </CardContent>
-              <CardFooter className="border-t bg-slate-50 px-6 py-4">
-                <div className="flex flex-col gap-4 sm:flex-row w-full">
-                  <a 
-                    href={supplement.detailsUrl || '#'} 
-                    className="flex items-center justify-center px-4 py-2 border border-slate-300 bg-white text-sm font-medium rounded-md hover:bg-slate-50 flex-1"
-                  >
-                    Plus d'informations
-                  </a>
-                  <a 
-                    href={supplement.url || '#'} 
-                    className="flex items-center justify-center px-4 py-2 bg-green-600 text-white text-sm font-medium rounded-md hover:bg-green-700 flex-1"
-                  >
-                    Voir la solution complète
-                  </a>
-                </div>
-              </CardFooter>
-            </Card>
-          );
-        })}
-      </div>
+                  <Separator />
+
+                  <div className="space-y-2">
+                    <h4 className="font-medium text-sm">Main Benefits:</h4>
+                    <ul className="grid grid-cols-1 gap-1 sm:grid-cols-2">
+                      {supplement.benefits.map((benefit, idx) => (
+                        <li key={idx} className="text-sm flex items-start">
+                          <span className="bg-green-100 text-green-800 rounded-full p-1 mr-2 mt-0.5">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-3 h-3">
+                              <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" />
+                            </svg>
+                          </span>
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  {supplement.naturalSources && (
+                    <div className="space-y-2">
+                      <h4 className="font-medium text-sm">Natural Sources:</h4>
+                      <p className="text-sm text-muted-foreground">{supplement.naturalSources.join(', ')}</p>
+                    </div>
+                  )}
+
+                  <div className="flex items-center text-sm text-muted-foreground mt-2">
+                    <Clock className="h-4 w-4 mr-1" />
+                    Results typically visible after {supplement.timeToEffect || '2-4 weeks'} of regular use
+                  </div>
+                </CardContent>
+                <CardFooter className="border-t bg-slate-50 px-6 py-4">
+                  <div className="flex flex-col gap-4 sm:flex-row w-full">
+                    <button 
+                      disabled
+                      className="flex items-center justify-center px-4 py-2 border border-slate-300 bg-white text-sm font-medium rounded-md text-slate-400 cursor-not-allowed flex-1"
+                    >
+                      Details Coming Soon
+                    </button>
+                    <button 
+                      disabled
+                      className="flex items-center justify-center px-4 py-2 bg-green-600/50 text-white text-sm font-medium rounded-md cursor-not-allowed flex-1"
+                    >
+                      Clinical Report
+                    </button>
+                  </div>
+                </CardFooter>
+              </Card>
+            );
+          })}
+        </div>
+      )}
 
       <div className="flex justify-center mt-8">
         <button 
           onClick={restartQuiz}
-          className="flex items-center text-slate-600 hover:text-slate-900"
+          className="flex items-center text-slate-600 hover:text-slate-900 border border-slate-200 px-4 py-2 rounded-lg transition-colors bg-white hover:bg-slate-50"
         >
-          <ArrowLeft className="h-4 w-4 mr-1" />
-          Refaire le quiz
+          <ArrowLeft className="h-4 w-4 mr-2" />
+          Retake Assessment
         </button>
       </div>
     </div>

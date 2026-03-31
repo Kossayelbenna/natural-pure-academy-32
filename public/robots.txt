@@ -1,6 +1,6 @@
 
-# Natural Pure Academy Robots.txt
-# Website: https://naturalpureacademy.org
+# NATURAL&PURE Robots.txt
+# Website: https://natural-and-pure.org
 
 User-agent: *
 Allow: /
@@ -27,4 +27,4 @@ User-agent: DuckDuckBot
 Allow: /
 
 # Sitemap location
-Sitemap: https://naturalpureacademy.org/sitemap.xml
+Sitemap: https://natural-and-pure.org/sitemap.xml

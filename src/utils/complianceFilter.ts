@@ -200,7 +200,6 @@ const setupKeyRotation = () => {
     // Réinitialiser la clé de chiffrement
     encryptionKey = null;
     generateEncryptionKey().catch(console.error);
-    console.log('Clé de chiffrement régénérée pour raisons de sécurité');
   }, rotationInterval);
 };
 

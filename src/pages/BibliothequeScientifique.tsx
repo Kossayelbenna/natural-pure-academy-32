@@ -12,8 +12,8 @@ const BibliothequeScientifique = () => {
   return (
     <>
       <SEOHead
-        title={t('Scientific Library - Natural Pure Academy')}
-        description={t('Explore peer-reviewed scientific publications and research by Natural Pure Academy on nutrition, health, and micronutrients.')}
+        title={t('Scientific Library - NATURALPURE CORPORATION')}
+        description={t('Explore peer-reviewed scientific publications and research by NATURALPURE CORPORATION on nutrition, health, and micronutrients.')}
         keywords={t('scientific research, nutrition studies, health publications, micronutrients research')}
       />
 

@@ -153,7 +153,6 @@ export const useArticleEngagement = ({
     readingInterval.current = setInterval(checkEngagement, 5000);
 
     // Log initial view
-    console.log(`[ArticleEngagement] Article ${articleId} view started`);
 
     return () => {
       // Remove event listeners
@@ -167,7 +166,6 @@ export const useArticleEngagement = ({
       }
 
       // Log final metrics
-      console.log(`[ArticleEngagement] Article ${articleId} view ended:`, {
         readTime: (Date.now() - startTime.current) / 1000,
         scrollDepth: maxScrollDepth.current,
         interactions: interactionCount.current

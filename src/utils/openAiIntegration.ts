@@ -210,7 +210,6 @@ export const enrichRecommendationsWithExternalAI = async (
 ): Promise<Recommendation[]> => {
   // Vérifier si OpenAI est configuré et activé
   if (!isOpenAIConfigured()) {
-    console.log("OpenAI n'est pas configuré ou activé. Utilisation des recommandations standard.");
     return recommendations;
   }
 
@@ -233,7 +232,6 @@ export const enrichRecommendationsWithExternalAI = async (
     if (config.cacheResponses) {
       const cachedResult = getCachedResponse(cacheKey);
       if (cachedResult) {
-        console.log("Utilisation des enrichissements en cache pour les recommandations");
         return cachedResult;
       }
     }
@@ -322,7 +320,6 @@ Répondez au format JSON avec une structure comme suit:
       return enrichedRecommendations;
     } catch (parseError) {
       console.error("Erreur lors du parsing de la réponse OpenAI:", parseError);
-      console.log("Réponse brute:", result);
       return recommendations; // Retourner les recommandations non enrichies
     }
   } catch (error) {

@@ -28,7 +28,6 @@ export const GDPRCompliance: React.FC = () => {
     setShowDialog(false);
 
     // Track consent for Google Ad Grant compliance
-    console.log("[GoogleAdGrantsSafety] GDPR consent recorded:", consentData);
   };
 
   return (
@@ -40,7 +39,7 @@ export const GDPRCompliance: React.FC = () => {
 
         <div className="space-y-4 py-4">
           <p className="text-sm text-muted-foreground">
-            Natural Pure Academy, en tant qu'organisation à but non lucratif, collecte certaines données pour améliorer 
+            NATURALPURE CORPORATION, en tant qu'organisation à but non lucratif, collecte certaines données pour améliorer 
             votre expérience sur notre site. Veuillez sélectionner les options pour lesquelles vous donnez votre consentement:
           </p>
 

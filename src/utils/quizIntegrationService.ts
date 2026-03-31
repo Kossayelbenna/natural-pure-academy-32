@@ -72,15 +72,12 @@ const enrichQuizData = (quizData: QuizData) => {
  * Obtenir des recommandations personnalisées basées sur les réponses au quiz
  */
 const getPersonalizedRecommendations = (enrichedQuizData: any): Recommendation[] => {
-  console.log("Génération de recommandations complètes avec les données:", enrichedQuizData);
   
   // Tableau pour stocker toutes les recommandations candidates
   const recommendationCandidates: any[] = [];
   
   // Traiter les symptômes
   if (enrichedQuizData.symptoms && enrichedQuizData.symptoms.length > 0) {
-    console.log("Génération de recommandations avec les données:", enrichedQuizData);
-    console.log("Analyse des données du quiz pour les recommandations:", enrichedQuizData);
     
     enrichedQuizData.symptoms.forEach((symptom: string) => {
       // Récupérer les recommandations liées aux symptômes depuis les mappings
@@ -204,8 +201,6 @@ const getPersonalizedRecommendations = (enrichedQuizData: any): Recommendation[]
     .sort((a: any, b: any) => b.relevanceScore - a.relevanceScore)
     .slice(0, 5);
   
-  console.log("Recommandations de base générées:", finalRecommendations.length);
-  console.log("Recommandations enrichies générées:", finalRecommendations.length);
   
   return finalRecommendations;
 };

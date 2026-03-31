@@ -68,7 +68,6 @@ const LaboSolutions = () => {
 
   // Gérer la sélection d'une condition de santé
   const handleSelectCondition = (condition: string) => {
-    console.log(`Condition sélectionnée: ${condition}`);
     // Logique supplémentaire si nécessaire
   };
 

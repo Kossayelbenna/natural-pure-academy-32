@@ -12,6 +12,7 @@ import ObjectivesStep from "@/components/quiz/ObjectivesStep";
 import ProteinConsumptionStep from "@/components/quiz/ProteinConsumptionStep";
 import QuizResults from "@/components/QuizResults";
 import ScientificTrustBadges from "@/components/quiz/ScientificTrustBadges";
+import MedicalDisclaimer from "@/components/MedicalDisclaimer";
 import { QuizStep } from "@/components/quiz/types";
 import { FlaskConical, Brain, BookOpen, CheckCircle } from "lucide-react";
 
@@ -82,7 +83,7 @@ const Quiz = () => {
     return (
       <>
         <Navbar />
-        <QuizResults quizData={quizData} restartQuiz={restartQuiz} />
+        <QuizResults quizData={quizData} recommendations={[]} restartQuiz={restartQuiz} />
         <Footer />
       </>
     );
@@ -143,8 +144,8 @@ const Quiz = () => {
         canonicalUrl="https://natural-and-pure.org/quiz"
         keywords={["nutrition quiz", "nutritional assessment", "personalized nutrition", "evidence-based", "free nutrition quiz"]}
       />
-
       <Navbar />
+      <MedicalDisclaimer variant="banner" />
 
       <main>
         {/* Intro Section */}

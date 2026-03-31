@@ -141,14 +141,12 @@ function scoreRecommendations(quizData: QuizData): Recommendation[] {
 
   // Si les données du quiz sont insuffisantes, retourner toutes les recommandations avec un score moyen
   if (!hasValidData) {
-    console.log("Données insuffisantes pour une analyse précise, utilisation de scores par défaut");
     scoredRecommendations.forEach(rec => {
       rec.relevanceScore = 0.6 + Math.random() * 0.3; // Score entre 0.6 et 0.9
     });
     return scoredRecommendations.sort((a, b) => b.relevanceScore - a.relevanceScore);
   }
 
-  console.log("Analyse des données du quiz pour les recommandations:", quizData);
 
   // Fonction d'évaluation des symptômes
   if (quizData.symptoms && quizData.symptoms.length > 0) {
@@ -331,7 +329,6 @@ function scoreRecommendations(quizData: QuizData): Recommendation[] {
 
 // Fonction principale pour générer des recommandations basées sur les données du quiz
 export function generateRecommendations(quizData: QuizData): Recommendation[] {
-  console.log("Génération de recommandations avec les données:", quizData);
 
   try {
     // Vérifier si les données du quiz contiennent au moins quelques informations utiles
@@ -341,7 +338,6 @@ export function generateRecommendations(quizData: QuizData): Recommendation[] {
     });
 
     if (!hasMinimalData) {
-      console.log("Données minimales manquantes, retour de recommandations par défaut");
       return recommendationDatabase.slice(0, 3).map(rec => ({...rec, relevanceScore: 0.7}));
     }
 
@@ -408,9 +404,7 @@ export function enrichRecommendationsWithScientificTerms(recommendations: Recomm
 // Fonction combinée pour générer des recommandations complètes et enrichies
 export function getComprehensiveRecommendations(quizData: QuizData): Recommendation[] {
   try {
-    console.log("Génération de recommandations complètes avec les données:", quizData);
     const baseRecommendations = generateRecommendations(quizData);
-    console.log("Recommandations de base générées:", baseRecommendations.length);
 
     if (baseRecommendations.length === 0) {
       console.warn("Aucune recommandation de base générée");
@@ -418,7 +412,6 @@ export function getComprehensiveRecommendations(quizData: QuizData): Recommendat
     }
 
     const enrichedRecommendations = enrichRecommendationsWithScientificTerms(baseRecommendations);
-    console.log("Recommandations enrichies générées:", enrichedRecommendations.length);
     return enrichedRecommendations;
   } catch (error) {
     console.error("Erreur dans getComprehensiveRecommendations:", error);

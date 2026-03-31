@@ -123,8 +123,8 @@ const Contact = () => {
                           hello@natural-and-pure.org
                         </a>
                         <br />
-                        <a href="mailto:founder@natural-and-pure.org" className="text-sm text-indigo-600 hover:text-indigo-800 transition-colors">
-                          founder@natural-and-pure.org
+                        <a href="mailto:contact@natural-and-pure.org" className="text-sm text-indigo-600 hover:text-indigo-800 transition-colors">
+                          contact@natural-and-pure.org
                         </a>
                       </div>
                     </div>

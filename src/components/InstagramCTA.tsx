@@ -53,7 +53,6 @@ const InstagramCTA = () => {
       semanticVariant: rotationIndex
     };
     
-    console.log("Redirection log:", redirectionLog);
     
     // Show redirecting state
     setRedirecting(true);

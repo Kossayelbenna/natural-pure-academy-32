@@ -118,7 +118,7 @@ const PrivacyPolicy = () => {
                 <li>Withdraw consent at any time</li>
               </ul>
               <p className="text-slate-700 mt-4">
-                To exercise any of these rights, contact us at: <a href="mailto:founder@natural-and-pure.org" className="text-blue-600 hover:underline">founder@natural-and-pure.org</a>
+                To exercise any of these rights, contact us at: <a href="mailto:contact@natural-and-pure.org" className="text-blue-600 hover:underline">contact@natural-and-pure.org</a>
               </p>
             </section>
 
@@ -146,8 +146,8 @@ const PrivacyPolicy = () => {
                 <p className="text-slate-600 text-sm mt-1">19580 West Indian School Rd, Buckeye, AZ 85396, USA</p>
                 <p className="text-slate-600 text-sm">EIN: 98-1830546</p>
                 <p className="mt-3">
-                  <a href="mailto:founder@natural-and-pure.org" className="text-blue-600 hover:underline text-sm">
-                    founder@natural-and-pure.org
+                  <a href="mailto:contact@natural-and-pure.org" className="text-blue-600 hover:underline text-sm">
+                    contact@natural-and-pure.org
                   </a>
                 </p>
               </div>
