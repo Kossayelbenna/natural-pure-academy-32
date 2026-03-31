@@ -1,153 +1,108 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Instagram, Twitter, Facebook, Mail } from 'lucide-react';
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { useLanguage } from "@/contexts/LanguageContext";
+import { Mail, Github, ExternalLink } from 'lucide-react';
 
 const Footer = () => {
-  const { t } = useLanguage();
+  const currentYear = new Date().getFullYear();
+
   return (
-    <footer className="bg-natural-50 border-t border-natural-100">
+    <footer className="bg-slate-900 text-slate-300">
+      {/* Main Footer */}
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div className="space-y-4">
-            <Link to="/" className="flex items-center space-x-2">
-              <span className="text-2xl font-display font-semibold bg-clip-text text-transparent bg-gradient-to-r from-natural-700 to-natural-500">
-                Natural&Pure
-              </span>
-            </Link>
-            <p className="text-sm text-muted-foreground">
-              {t('footer.newsletter')}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
+          {/* Brand Column */}
+          <div className="md:col-span-2 space-y-4">
+            <div className="flex items-center gap-1">
+              <span className="text-xl font-bold text-white">NATURAL</span>
+              <span className="text-xl font-bold text-emerald-400">&</span>
+              <span className="text-xl font-bold text-white">PURE</span>
+            </div>
+            <p className="text-sm text-slate-400 max-w-sm leading-relaxed">
+              A nonprofit research organization democratizing evidence-based nutrition education through artificial intelligence. 100% free, 100% open, 100% science.
             </p>
-            <div className="flex space-x-4">
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                <Button variant="ghost" size="icon" className="h-8 w-8 rounded-full bg-natural-100 hover:bg-natural-200">
-                  <Instagram className="h-4 w-4 text-natural-700" />
-                </Button>
+            <div className="flex items-center gap-3">
+              <a
+                href="mailto:founder@natural-and-pure.org"
+                className="flex items-center gap-2 text-sm text-slate-400 hover:text-emerald-400 transition-colors"
+                aria-label="Email founder"
+              >
+                <Mail className="h-4 w-4" />
+                founder@natural-and-pure.org
               </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-                <Button variant="ghost" size="icon" className="h-8 w-8 rounded-full bg-natural-100 hover:bg-natural-200">
-                  <Twitter className="h-4 w-4 text-natural-700" />
-                </Button>
-              </a>
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                <Button variant="ghost" size="icon" className="h-8 w-8 rounded-full bg-natural-100 hover:bg-natural-200">
-                  <Facebook className="h-4 w-4 text-natural-700" />
-                </Button>
-              </a>
-              <a href="mailto:contact@naturalpure.com" aria-label="Email">
-                <Button variant="ghost" size="icon" className="h-8 w-8 rounded-full bg-natural-100 hover:bg-natural-200">
-                  <Mail className="h-4 w-4 text-natural-700" />
-                </Button>
-              </a>
+            </div>
+            <div className="inline-flex items-center gap-2 px-3 py-2 bg-emerald-900/40 border border-emerald-700/50 rounded-lg">
+              <div className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
+              <span className="text-xs text-emerald-300 font-medium">Arizona Nonprofit Corporation</span>
             </div>
           </div>
 
-          <div>
-            <h3 className="font-display text-lg font-medium mb-4">{t('footer.quickLinks')}</h3>
+          {/* Navigation Column */}
+          <div className="space-y-3">
+            <h3 className="text-sm font-semibold text-white uppercase tracking-wider">Navigation</h3>
             <ul className="space-y-2">
-              <li>
-                <Link to="/" className="text-sm text-muted-foreground hover:text-natural-700 transition-colors">
-                  Accueil
-                </Link>
-              </li>
-              <li>
-                <Link to="/articles" className="text-sm text-muted-foreground hover:text-natural-700 transition-colors">
-                  Articles
-                </Link>
-              </li>
-              <li>
-                <Link to="/about" className="text-sm text-muted-foreground hover:text-natural-700 transition-colors">
-                  À propos
-                </Link>
-              </li>
-              <li>
-                <Link to="/contact" className="text-sm text-muted-foreground hover:text-natural-700 transition-colors">
-                  Contact
-                </Link>
-              </li>
-              <li>
-                <Link to="/impact" className="text-sm text-muted-foreground hover:text-natural-700 transition-colors">
-                  Impact
-                </Link>
-              </li>
-              <li>
-                <Link to="/support" className="text-sm text-muted-foreground hover:text-natural-700 transition-colors">
-                  Support Our Mission
-                </Link>
-              </li>
+              {[
+                { name: "Home", path: "/" },
+                { name: "About Us", path: "/about" },
+                { name: "Research", path: "/research" },
+                { name: "Quiz", path: "/quiz" },
+                { name: "Contact", path: "/contact" },
+              ].map((link) => (
+                <li key={link.path}>
+                  <Link
+                    to={link.path}
+                    className="text-sm text-slate-400 hover:text-emerald-400 transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
-          <div>
-            <h3 className="font-display text-lg font-medium mb-4">{t('footer.categories')}</h3>
+          {/* Legal Column */}
+          <div className="space-y-3">
+            <h3 className="text-sm font-semibold text-white uppercase tracking-wider">Legal</h3>
             <ul className="space-y-2">
-              <li>
-                <Link to="/articles?category=supplements" className="text-sm text-muted-foreground hover:text-natural-700 transition-colors">
-                  {t('footer.supplements')}
-                </Link>
-              </li>
-              <li>
-                <Link to="/articles?category=skincare" className="text-sm text-muted-foreground hover:text-natural-700 transition-colors">
-                  Soins de la Peau
-                </Link>
-              </li>
-              <li>
-                <Link to="/articles?category=haircare" className="text-sm text-muted-foreground hover:text-natural-700 transition-colors">
-                  Santé des Cheveux
-                </Link>
-              </li>
-              <li>
-                <Link to="/articles?category=wellness" className="text-sm text-muted-foreground hover:text-natural-700 transition-colors">
-                  Bien-être
-                </Link>
-              </li>
+              {[
+                { name: "Privacy Policy", path: "/privacy-policy" },
+                { name: "Terms of Use", path: "/terms-of-use" },
+                { name: "Accessibility", path: "/accessibility" },
+              ].map((link) => (
+                <li key={link.path}>
+                  <Link
+                    to={link.path}
+                    className="text-sm text-slate-400 hover:text-emerald-400 transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
-          </div>
-
-          <div>
-            <h3 className="font-display text-lg font-medium mb-4">Newsletter</h3>
-            <p className="text-sm text-muted-foreground mb-4">
-              {t('footer.newsletter')}
-            </p>
-            <form className="space-y-2">
-              <Input
-                type="email"
-                placeholder="Votre email"
-                className="bg-white border-natural-200"
-              />
-              <Button className="w-full bg-gradient-to-r from-natural-500 to-natural-600 hover:from-natural-600 hover:to-natural-700">
-                {t('footer.subscribe')}
-              </Button>
-            </form>
           </div>
         </div>
+      </div>
 
-        <div className="mt-12 pt-6 border-t border-natural-100">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="bg-natural-800 p-4 rounded-lg mb-8 text-center">
-              <p className="text-base text-white font-medium mb-1">
-                Natural&Pure is a 501(c)(3) non-profit organization (EIN:  REPLACE_WITH_ACTUAL_EIN)
+      {/* Legal Strip */}
+      <div className="border-t border-slate-800 bg-slate-950">
+        <div className="container mx-auto px-4 py-5">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+            <div className="space-y-1">
+              <p className="text-sm font-semibold text-white">
+                NATURALPURE CORPORATION
               </p>
-              <p className="text-sm text-natural-300">
-                {t('All content and activities are for educational and research purposes only, not for commercial gain.')}
+              <p className="text-xs text-slate-500">
+                EIN: <span className="text-slate-400 font-mono">98-1830546</span> &nbsp;|&nbsp;
+                Entity ID: <span className="text-slate-400 font-mono">23750798</span> &nbsp;|&nbsp;
+                Arizona Nonprofit Corporation
+              </p>
+              <p className="text-xs text-slate-600">
+                19580 West Indian School Rd, Buckeye, AZ 85396 &nbsp;|&nbsp;
+                All content is for educational and research purposes only.
               </p>
             </div>
-            <div className="flex space-x-4 mt-4 md:mt-0">
-              <Link to="/privacy" className="text-xs text-muted-foreground hover:text-natural-700 transition-colors">
-                {t('footer.privacy')}
-              </Link>
-              <Link to="/terms" className="text-xs text-muted-foreground hover:text-natural-700 transition-colors">
-                {t('footer.terms')}
-              </Link>
-              <Link to="/accessibility" className="text-xs text-muted-foreground hover:text-natural-700 transition-colors">
-                {t('Accessibility')}
-              </Link>
-              <Link to="/sitemap" className="text-xs text-muted-foreground hover:text-natural-700 transition-colors">
-                {t('Site Map')}
-              </Link>
-            </div>
+            <p className="text-xs text-slate-600 shrink-0">
+              © {currentYear} NATURALPURE CORPORATION. All rights reserved.
+            </p>
           </div>
         </div>
       </div>

@@ -44,9 +44,9 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />
 
-      {/* Google Ad Grants compliance: Non-profit status meta tag */}
+      {/* Nonprofit organization meta tags */}
       <meta name="organization-type" content="nonprofit" />
-      <meta name="organization-tax-status" content="501c3" />
+      <meta name="organization-ein" content="98-1830546" />
 
       {/* Structured Data */}
       {structuredData && (
