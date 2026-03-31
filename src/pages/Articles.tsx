@@ -192,11 +192,11 @@ const Articles = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto text-center">
             <h1 className="font-display text-4xl md:text-5xl font-semibold leading-tight mb-6">
-              Nos Articles
+              Our Articles
             </h1>
             <p className="text-lg text-muted-foreground mb-8 max-w-xl mx-auto">
-              Explorez notre collection d'articles fondés sur la science pour comprendre 
-              les faits derrière les tendances en santé naturelle.
+              Explore our collection of science-backed articles to understand 
+              the facts behind natural wellness trends.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button 
@@ -205,7 +205,7 @@ const Articles = () => {
                 onClick={() => setIsSearchVisible(!isSearchVisible)}
               >
                 <Search className="h-4 w-4" />
-                Rechercher
+                Search
               </Button>
               <Button 
                 variant="outline" 
@@ -214,7 +214,7 @@ const Articles = () => {
                 disabled={!selectedCategory && !searchTerm}
               >
                 <X className="h-4 w-4" />
-                Effacer les filtres
+                Clear Filters
               </Button>
             </div>
             
@@ -224,7 +224,7 @@ const Articles = () => {
                 <form onSubmit={handleSearch} className="flex gap-2">
                   <Input
                     type="search"
-                    placeholder="Rechercher un article..."
+                    placeholder="Search an article..."
                     className="flex-1"
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
@@ -247,7 +247,7 @@ const Articles = () => {
             <div className="lg:col-span-1">
               <div className="sticky top-24 glass rounded-lg p-6">
                 <div className="flex items-center justify-between mb-4">
-                  <h2 className="font-display text-xl font-medium">Catégories</h2>
+                  <h2 className="font-display text-xl font-medium">Categories</h2>
                   <Filter className="h-5 w-5 text-muted-foreground" />
                 </div>
                 <div className="space-y-2">

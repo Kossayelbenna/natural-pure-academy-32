@@ -394,18 +394,14 @@ const HomePage = () => {
                 Take our science-based nutrition assessment. Completely free, powered by evidence-based research.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button asChild size="lg" className="bg-white text-emerald-700 hover:bg-emerald-50 rounded-xl px-8 py-4 text-base font-semibold shadow-xl transition-all duration-300 hover:-translate-y-0.5">
-                  <Link to="/quiz" className="flex items-center gap-2">
-                    <Zap className="h-5 w-5" />
-                    Begin Assessment
-                  </Link>
-                </Button>
-                <Button asChild size="lg" variant="outline" className="border-white/40 text-white hover:bg-white/10 rounded-xl px-8 py-4 text-base font-semibold transition-all duration-300">
-                  <Link to="/about" className="flex items-center gap-2">
-                    Learn About Us
-                    <ArrowRight className="h-4 w-4" />
-                  </Link>
-                </Button>
+                <Link to="/quiz" className="inline-flex items-center justify-center gap-2 bg-white text-emerald-800 hover:text-emerald-900 hover:bg-emerald-50 rounded-xl px-8 py-4 text-lg font-semibold shadow-xl transition-all duration-300 hover:-translate-y-0.5 border-none">
+                  <Zap className="h-5 w-5" />
+                  Begin Assessment
+                </Link>
+                <Link to="/about" className="inline-flex items-center justify-center gap-2 bg-transparent text-white border-2 border-white/40 hover:bg-white/10 rounded-xl px-8 py-4 text-lg font-semibold transition-all duration-300">
+                  Learn About Us
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
               </div>
 
               <div className="mt-10 flex flex-wrap justify-center gap-6 text-sm text-emerald-100">

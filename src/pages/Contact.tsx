@@ -119,8 +119,8 @@ const Contact = () => {
                       </div>
                       <div>
                         <p className="font-semibold text-slate-900">General Inquiries</p>
-                        <a href="mailto:hello@natural-and-pure.org" className="text-sm text-indigo-600 hover:text-indigo-800 transition-colors">
-                          hello@natural-and-pure.org
+                        <a href="mailto:contact@natural-and-pure.org" className="text-sm text-indigo-600 hover:text-indigo-800 transition-colors">
+                          contact@natural-and-pure.org
                         </a>
                         <br />
                         <a href="mailto:contact@natural-and-pure.org" className="text-sm text-indigo-600 hover:text-indigo-800 transition-colors">
@@ -149,11 +149,11 @@ const Contact = () => {
                     Interested in collaborating on nutritional science research or contributing abstracts and datasets to our platform? We'd love to hear from you.
                   </p>
                   <a
-                    href="mailto:research@natural-and-pure.org"
+                    href="mailto:contact@natural-and-pure.org"
                     className="inline-flex items-center gap-2 text-sm font-medium text-blue-700 hover:text-blue-900"
                   >
                     <Mail className="h-4 w-4" />
-                    research@natural-and-pure.org
+                    contact@natural-and-pure.org
                   </a>
                 </motion.div>
 
@@ -175,11 +175,11 @@ const Contact = () => {
                     Interested in integrating NutriAI into your platform or partnering with NATURAL&PURE for a shared mission? Let's talk.
                   </p>
                   <a
-                    href="mailto:partnerships@natural-and-pure.org"
+                    href="mailto:contact@natural-and-pure.org"
                     className="inline-flex items-center gap-2 text-sm font-medium text-emerald-700 hover:text-emerald-900"
                   >
                     <Mail className="h-4 w-4" />
-                    partnerships@natural-and-pure.org
+                    contact@natural-and-pure.org
                   </a>
                 </motion.div>
               </div>
@@ -219,7 +219,7 @@ const Contact = () => {
                           <label htmlFor="contact-email" className="text-sm font-medium text-slate-700">
                             Email
                           </label>
-                          <Input id="contact-email" type="email" placeholder="your@email.com" required className="border-slate-200" />
+                          <Input id="contact-email" type="email" placeholder="contact@natural-and-pure.org" required className="border-slate-200" />
                         </div>
                       </div>
 

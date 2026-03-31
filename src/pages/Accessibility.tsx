@@ -97,7 +97,7 @@ const Accessibility = () => {
               {t('We welcome your feedback on the accessibility of the NATURALPURE CORPORATION website. Please let us know if you encounter accessibility barriers on our site:')}
             </p>
             <ul>
-              <li>{t('Email: accessibility@natural-and-pure.org')}</li>
+              <li>{t('Email: contact@natural-and-pure.org')}</li>
               <li>{t('Phone: +1 (555) 123-4567')}</li>
               <li>{t('Address: 123 Science Way, San Francisco, CA 94107')}</li>
             </ul>

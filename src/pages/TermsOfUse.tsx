@@ -37,9 +37,15 @@ const TermsOfUse = () => {
               {t('By accessing or using the NATURAL&PURE website ("the Site"), you agree to comply with and be bound by these Terms of Use. If you do not agree to these terms, please do not use the Site.')}
             </p>
 
-            <h2>{t('2. Non-Profit Educational Purpose')}</h2>
+            <h2>{t('2. Legal Notice & Corporate Entity')}</h2>
             <p>
-              {t('NATURALPURE CORPORATION (EIN: 98-1830546) is an Arizona nonprofit corporation dedicated to research and education in the field of nutrition. Our resources are provided for educational purposes only and are not intended to replace professional medical advice.')}
+              <strong>{t('Legal Entity:')}</strong> NATURALPURE CORPORATION (EIN: 98-1830546)<br />
+              <strong>{t('Headquarters / Address:')}</strong> 19580 W Indian School Rd, Buckeye, AZ 85396, United States<br />
+              <strong>{t('Director of Publication:')}</strong> Kossay El Benna<br />
+              <strong>{t('Hosting Provider:')}</strong> Vercel Inc., 340 S Lemon Ave #4133, Walnut, CA 91789<br />
+            </p>
+            <p className="mt-2">
+              {t('NATURALPURE CORPORATION is an Arizona nonprofit corporation dedicated to research and education in the field of nutrition. Our resources are provided for educational purposes only and are not intended to replace professional medical advice or achieve commercial gain.')}
             </p>
 
             <h2>{t('3. Intellectual Property')}</h2>
@@ -86,7 +92,7 @@ const TermsOfUse = () => {
               NATURALPURE CORPORATION<br />
               19580 West Indian School Rd<br />
               Buckeye, AZ 85396, USA<br />
-              Email: legal@natural-and-pure.org
+              Email: contact@natural-and-pure.org
             </p>
 
             <div className="mt-10 p-5 bg-slate-50 rounded-lg border border-slate-200">

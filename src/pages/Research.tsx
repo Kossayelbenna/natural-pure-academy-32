@@ -588,7 +588,7 @@ const Research = () => {
                   },
                   {
                     question: "Can I contribute research or collaborate?",
-                    answer: "Absolutely! We welcome collaborations with researchers, institutions, and individuals who want to advance evidence-based nutrition education. Contact us at research@natural-and-pure.org or through our contact page.",
+                    answer: "Absolutely! We welcome collaborations with researchers, institutions, and individuals who want to advance evidence-based nutrition education. Contact us at contact@natural-and-pure.org or through our contact page.",
                   },
                 ].map((faq, i) => (
                   <FAQItem key={i} question={faq.question} answer={faq.answer} />

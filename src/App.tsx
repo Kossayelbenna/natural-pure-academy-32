@@ -9,6 +9,8 @@ import ArticleEngagementTracker from "./components/ArticleEngagementTracker";
 import { LanguageProvider } from "./components/LanguageProvider";
 import ErrorBoundary from "./components/ErrorBoundary";
 
+import { CookieConsentBanner } from "./components/CookieConsentBanner";
+
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
@@ -46,6 +48,9 @@ const App = () => {
       <LanguageProvider>
         <TooltipProvider>
           <div className="min-h-screen bg-background" lang={language}>
+            <div className="bg-amber-100/70 border-b border-amber-200 py-1.5 px-4 text-center text-[11px] text-amber-800 font-medium z-50 relative">
+              These materials are for educational purposes only and do not substitute professional medical advice.
+            </div>
             <Toaster />
             <ErrorBoundary>
               <Outlet />
@@ -53,6 +58,7 @@ const App = () => {
             <MetricTracker />
             <ConversionTracker />
             <ArticleEngagementTracker />
+            <CookieConsentBanner />
           </div>
         </TooltipProvider>
       </LanguageProvider>

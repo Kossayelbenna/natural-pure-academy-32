@@ -36,7 +36,7 @@ const ORGANIZATION_SCHEMA = {
   "contactPoint": [
     {
       "@type": "ContactPoint",
-      "email": "research@natural-and-pure.org",
+      "email": "contact@natural-and-pure.org",
       "contactType": "Research Inquiries"
     },
     {

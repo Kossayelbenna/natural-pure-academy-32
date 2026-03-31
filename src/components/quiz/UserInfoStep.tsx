@@ -23,7 +23,7 @@ const UserInfoStep = ({ responses, updateResponse }: QuizStepProps) => {
           type="email"
           value={responses.email}
           onChange={(e) => updateResponse("email", e.target.value)}
-          placeholder="email@exemple.com"
+          placeholder="contact@natural-and-pure.org"
           className="mt-1"
         />
         <p className="text-xs text-muted-foreground mt-1">
